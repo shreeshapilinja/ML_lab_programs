@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>all prorgams.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<ol>
+<li>Implement and demonstratetheFIND-Salgorithm for finding the most specific hypothesis based on a given set of training data samples. Read the training data from a .CSV file and show the output for test cases. Develop an interactive program by Compareing the result by implementing LIST THEN ELIMINATE algorithm.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+fulldata = pd.read_csv(<span class="hljs-string">&#x27;enjoysport.csv&#x27;</span>)
+data = np.array(fulldata.iloc[:,:-<span class="hljs-number">1</span>])
+target = np.array(fulldata.iloc[:,-<span class="hljs-number">1</span>])
+sp = [<span class="hljs-string">&#x27;0&#x27;</span>]*<span class="hljs-built_in">len</span>(data[<span class="hljs-number">0</span>])
+<span class="hljs-keyword">for</span> i, instance <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(data):
+    <span class="hljs-keyword">if</span> target[i].lower() == <span class="hljs-string">&#x27;yes&#x27;</span>:
+        <span class="hljs-keyword">for</span> j, attribute <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(instance):
+            <span class="hljs-keyword">if</span> sp[j] == <span class="hljs-string">&#x27;0&#x27;</span>:
+                sp[j] = attribute
+            <span class="hljs-keyword">elif</span> sp[j] != attribute:
+                sp[j] = <span class="hljs-string">&#x27;?&#x27;</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Specific hypothesis: &quot;</span>,sp)
+</div></code></pre>
+<p>Specific hypothesis:  ['sunny', 'warm', '?', 'strong', '?', '?']
+<br></p>
+<ol start="2">
+<li>For a given set of training data examples stored in a .CSV file, implement and demonstrate the Candidate-Eliminationalgorithm. Output a description of the set of all hypotheses consistent with the training examples.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+fulldata = pd.read_csv(<span class="hljs-string">&#x27;enjoysport.csv&#x27;</span>)
+data = np.array(fulldata.iloc[:,:-<span class="hljs-number">1</span>])
+target = np.array(fulldata.iloc[:,-<span class="hljs-number">1</span>])
+sp = [<span class="hljs-string">&#x27;0&#x27;</span>]*<span class="hljs-built_in">len</span>(data[<span class="hljs-number">0</span>])
+gn = [[<span class="hljs-string">&quot;?&quot;</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(sp))] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(sp))]
+<span class="hljs-keyword">for</span> i, instance <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(data):
+    <span class="hljs-keyword">if</span> target[i].lower() == <span class="hljs-string">&#x27;yes&#x27;</span>:
+        <span class="hljs-keyword">for</span> j, attribute <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(instance):
+            <span class="hljs-keyword">if</span> sp[j] == <span class="hljs-string">&#x27;0&#x27;</span>:
+                sp[j] = attribute
+            <span class="hljs-keyword">elif</span> sp[j] != attribute:
+                sp[j] = <span class="hljs-string">&#x27;?&#x27;</span>
+                gn[j][j] = sp[j]
+    <span class="hljs-keyword">if</span> target[i].lower() == <span class="hljs-string">&#x27;no&#x27;</span>:
+        <span class="hljs-keyword">for</span> j, attribute <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(instance):
+            <span class="hljs-keyword">if</span> sp[j] != attribute:
+                gn[j][j] = sp[j]
+gn = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> gn <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">all</span>(val == <span class="hljs-string">&#x27;?&#x27;</span> <span class="hljs-keyword">for</span> val <span class="hljs-keyword">in</span> x)]
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Specific hypothesis: &quot;</span>,sp)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;General hypothesis: &quot;</span>,gn)
+</div></code></pre>
+<p>Specific hypothesis:  ['sunny', 'warm', '?', 'strong', '?', '?'] <br>
+General hypothesis:  [['sunny', '?', '?', '?', '?', '?'], ['?', 'warm', '?', '?', '?', '?']]
+<br></p>
+<ol start="3">
+<li>Demonstrate Pre processing (Data Cleaning, Integration and Transformation) activity  on suitable data: For example:
+3.1 Identify and Delete Rows that Contain Duplicate Data by considering an appropriate dataset.
+3.2 Identify and Delete Columns That Contain a Single Value by considering an appropriate dataset.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> sklearn.impute <span class="hljs-keyword">import</span> SimpleImputer
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler, OrdinalEncoder, OneHotEncoder
+<span class="hljs-keyword">from</span> sklearn.compose <span class="hljs-keyword">import</span> ColumnTransformer
+<span class="hljs-keyword">from</span> sklearn.pipeline <span class="hljs-keyword">import</span> Pipeline
+housing = pd.read_csv(<span class="hljs-string">&#x27;housing.csv&#x27;</span>)
+
+<span class="hljs-comment"># Data Cleaning - Identifying and Deleting Duplicate Rows</span>
+housing_cleaned = housing.drop_duplicates()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Number of rows after removing duplicates:&quot;</span>, <span class="hljs-built_in">len</span>(housing_cleaned))
+
+<span class="hljs-comment"># Data Integration - Identifying and Deleting Columns with a Single Value</span>
+columns_to_drop = []
+<span class="hljs-keyword">for</span> column <span class="hljs-keyword">in</span> housing_cleaned.columns:
+    <span class="hljs-keyword">if</span> housing_cleaned[column].nunique() == <span class="hljs-number">1</span>:
+        columns_to_drop.append(column)
+housing_integrated = housing_cleaned.drop(columns=columns_to_drop)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Columns after removing single-valued columns:&quot;</span>)
+<span class="hljs-built_in">print</span>(housing_integrated.columns)
+
+<span class="hljs-comment"># Data Transformation - Preprocessing Pipeline</span>
+num_attribs = <span class="hljs-built_in">list</span>(housing_integrated.select_dtypes(include=[<span class="hljs-string">&#x27;float64&#x27;</span>, <span class="hljs-string">&#x27;int64&#x27;</span>]))
+cat_attribs = <span class="hljs-built_in">list</span>(housing_integrated.select_dtypes(include=[<span class="hljs-string">&#x27;object&#x27;</span>]))
+num_pipeline = Pipeline([
+    (<span class="hljs-string">&#x27;imputer&#x27;</span>, SimpleImputer(strategy=<span class="hljs-string">&quot;median&quot;</span>)),
+    (<span class="hljs-string">&#x27;std_scaler&#x27;</span>, StandardScaler()),
+])
+cat_pipeline = Pipeline([
+    (<span class="hljs-string">&#x27;ordinal_encoder&#x27;</span>, OrdinalEncoder()),
+    (<span class="hljs-string">&#x27;one_hot_encoder&#x27;</span>, OneHotEncoder()),
+])
+full_pipeline = ColumnTransformer([
+    (<span class="hljs-string">&quot;num&quot;</span>, num_pipeline, num_attribs),
+    (<span class="hljs-string">&quot;cat&quot;</span>, cat_pipeline, cat_attribs),
+])
+housing_preprocessed = full_pipeline.fit_transform(housing_integrated)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Preprocessed data shape:&quot;</span>, housing_preprocessed.shape)
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>Number of rows after removing duplicates: 20640
+Columns after removing single-valued columns:
+Index(['longitude', 'latitude', 'housing_median_age', 'total_rooms',
+       'total_bedrooms', 'population', 'households', 'median_income',
+       'median_house_value', 'ocean_proximity'],
+      dtype='object')
+Preprocessed data shape: (20640, 14)
+</div></code></pre>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+iris_df = pd.read_csv(<span class="hljs-string">&#x27;iris.csv&#x27;</span>)
+
+<span class="hljs-comment"># Identify and delete rows with duplicate data</span>
+iris_df.drop_duplicates(inplace=<span class="hljs-literal">True</span>)
+
+<span class="hljs-comment"># Identify and delete columns with a single value</span>
+columns_to_delete = []
+<span class="hljs-keyword">for</span> column <span class="hljs-keyword">in</span> iris_df.columns:
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(iris_df[column].unique()) == <span class="hljs-number">1</span>:
+        columns_to_delete.append(column)
+
+iris_df.drop(columns=columns_to_delete, inplace=<span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(iris_df)
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>      Id  SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm   Species 
+0      1            5.1           3.5            1.4           0.2   Iris-setosa 
+1      2            4.9           3.0            1.4           0.2   Iris-setosa  
+..   ...            ...           ...            ...           ...        ... 
+145  146            6.7           3.0            5.2           2.3    Iris-virginica   
+
+[150 rows x 6 columns]
+</div></code></pre>
+<ol start="4">
+<li>Demonstrate the working of the decision tree based ID3 algorithm. Use an appropriate data set for building the decision tree and apply this knowledge toclassify a new sample.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> math
+<span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">load_csv</span>(<span class="hljs-params">filename</span>):
+        lines=csv.reader(<span class="hljs-built_in">open</span>(filename,<span class="hljs-string">&quot;r&quot;</span>))
+        dataset=<span class="hljs-built_in">list</span>(lines)
+        headers=dataset.pop(<span class="hljs-number">0</span>)
+        <span class="hljs-keyword">return</span> dataset,headers
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span>:
+        <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self,attribute</span>):
+                self.attribute=attribute
+                self.children=[]
+                self.answer=<span class="hljs-string">&quot;&quot;</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">subtables</span>(<span class="hljs-params">data,col,delete</span>):
+        dic={}
+        coldata=[row[col] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> data]
+        attr=<span class="hljs-built_in">list</span>(<span class="hljs-built_in">set</span>(coldata))
+        counts=[<span class="hljs-number">0</span>]*<span class="hljs-built_in">len</span>(attr)
+        r=<span class="hljs-built_in">len</span>(data)
+        c=<span class="hljs-built_in">len</span>(data[<span class="hljs-number">0</span>])
+        <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(attr)):
+                <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(r):
+                        <span class="hljs-keyword">if</span> data[y][col]==attr[x]:
+                                counts[x]+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(attr)):
+                dic[attr[x]]=[[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(c)]<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(counts[x])]
+                pos=<span class="hljs-number">0</span>
+                <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(r):
+                        <span class="hljs-keyword">if</span> data[y][col]==attr[x]:
+                                <span class="hljs-keyword">if</span> delete:
+                                        <span class="hljs-keyword">del</span> data[y][col]
+                                dic[attr[x]][pos]=data[y]
+                                pos+=<span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> attr,dic
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">entropy</span>(<span class="hljs-params">S</span>):
+        attr=<span class="hljs-built_in">list</span>(<span class="hljs-built_in">set</span>(S))
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(attr)==<span class="hljs-number">1</span>:
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+        counts=[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>):
+                counts[i]=<span class="hljs-built_in">sum</span>([<span class="hljs-number">1</span> <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> S <span class="hljs-keyword">if</span> attr[i]==x])/(<span class="hljs-built_in">len</span>(S)*<span class="hljs-number">1.0</span>)
+        sums=<span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> cnt <span class="hljs-keyword">in</span> counts:
+                sums+=-<span class="hljs-number">1</span>*cnt*math.log(cnt,<span class="hljs-number">2</span>)
+        <span class="hljs-keyword">return</span> sums
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_gain</span>(<span class="hljs-params">data,col</span>):
+        attr,dic=subtables(data,col,delete=<span class="hljs-literal">False</span>)
+        total_size=<span class="hljs-built_in">len</span>(data)
+        entropies=[<span class="hljs-number">0</span>]*<span class="hljs-built_in">len</span>(attr)
+        ratio=[<span class="hljs-number">0</span>]*<span class="hljs-built_in">len</span>(attr)
+        total_entropy=entropy([row[-<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> data])
+        <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(attr)):
+                ratio[x]=<span class="hljs-built_in">len</span>(dic[attr[x]])/(total_size*<span class="hljs-number">1.0</span>)
+                entropies[x]=entropy([row[-<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> dic[attr[x]]])
+                total_entropy-=ratio[x]*entropies[x]
+        <span class="hljs-keyword">return</span> total_entropy
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">build_tree</span>(<span class="hljs-params">data,features</span>):
+        lastcol=[row[-<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> data]
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">len</span>(<span class="hljs-built_in">set</span>(lastcol)))==<span class="hljs-number">1</span>:
+                node=Node(<span class="hljs-string">&quot;&quot;</span>)
+                node.answer=lastcol[<span class="hljs-number">0</span>]
+                <span class="hljs-keyword">return</span> node
+        n=<span class="hljs-built_in">len</span>(data[<span class="hljs-number">0</span>])-<span class="hljs-number">1</span>
+        gains=[<span class="hljs-number">0</span>]*n
+        <span class="hljs-keyword">for</span> col <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+                gains[col]=compute_gain(data,col)
+        split=gains.index(<span class="hljs-built_in">max</span>(gains))
+        node=Node(features[split])
+        fea=features[:split]+features[split+<span class="hljs-number">1</span>:]
+        attr,dic=subtables(data,split,delete=<span class="hljs-literal">True</span>)
+        <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(attr)):
+                child=build_tree(dic[attr[x]],fea)
+                node.children.append((attr[x],child))
+        <span class="hljs-keyword">return</span> node
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">print_tree</span>(<span class="hljs-params">node,level</span>):
+        <span class="hljs-keyword">if</span> node.answer!=<span class="hljs-string">&quot;&quot;</span>:
+                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot; &quot;</span>*level,node.answer)
+                <span class="hljs-keyword">return</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot; &quot;</span>*level,node.attribute)
+        <span class="hljs-keyword">for</span> value,n <span class="hljs-keyword">in</span> node.children:
+                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot; &quot;</span>*(level+<span class="hljs-number">1</span>),value)
+                print_tree(n,level+<span class="hljs-number">2</span>)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">classify</span>(<span class="hljs-params">node,x_test,features</span>):
+        <span class="hljs-keyword">if</span> node.answer!=<span class="hljs-string">&quot;&quot;</span>:
+                <span class="hljs-built_in">print</span>(node.answer)
+                <span class="hljs-keyword">return</span>
+        pos=features.index(node.attribute)
+        <span class="hljs-keyword">for</span> value,n <span class="hljs-keyword">in</span> node.children:
+                <span class="hljs-keyword">if</span> x_test[pos]==value:
+                        classify(n,x_test,features)
+
+dataset,features=load_csv(<span class="hljs-string">&quot;id3.csv&quot;</span>)
+node1=build_tree(dataset,features)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The decision tree for the dataset using ID3 algorithm is &quot;</span>)
+print_tree(node1,<span class="hljs-number">0</span>)
+testdata,features=load_csv(<span class="hljs-string">&quot;id3_test_1.csv&quot;</span>)
+<span class="hljs-keyword">for</span> xtest <span class="hljs-keyword">in</span> testdata:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The test instance: &quot;</span>,xtest)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The label for test instance: &quot;</span>,end=<span class="hljs-string">&quot; &quot;</span>)
+        classify(node1,xtest,features)
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>The decision tree for the dataset using ID3 algorithm is
+ Outlook
+  rain
+   Wind
+    strong
+     no
+    weak
+     yes
+  sunny
+   Humidity
+    high
+     no
+    normal
+     yes
+  overcast
+   yes
+The test instance:  ['rain', 'cool', 'normal', 'strong']
+The label for test instance:  no
+The test instance:  ['sunny', 'mild', 'normal', 'strong']
+The label for test instance:  yes
+</div></code></pre>
+<ol start="5">
+<li>Demonstrate the working of the Random forest algorithm. Use an appropriate data set for building and apply this knowledge toclassify a new sample.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.3</span>, random_state=<span class="hljs-number">42</span>)
+
+<span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> RandomForestClassifier
+model = RandomForestClassifier(n_estimators=<span class="hljs-number">100</span>,max_leaf_nodes=<span class="hljs-number">16</span>,n_jobs=-<span class="hljs-number">1</span>)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Accuracy: <span class="hljs-subst">{accuracy}</span>&quot;</span>)
+
+<span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> export_graphviz
+export_graphviz(model.estimators_[<span class="hljs-number">99</span>], out_file=<span class="hljs-string">&quot;iris_tree.dot&quot;</span>, feature_names=iris.feature_names, class_names=iris.target_names, filled=<span class="hljs-literal">True</span>, rounded=<span class="hljs-literal">True</span>)
+
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+new_sample = np.array([[<span class="hljs-number">5.1</span>, <span class="hljs-number">3.5</span>, <span class="hljs-number">1.4</span>, <span class="hljs-number">0.2</span>]])
+new_sample_class = model.predict(new_sample)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Predicted class for the new sample: <span class="hljs-subst">{iris.target_names[new_sample_class[<span class="hljs-number">0</span>]]}</span>&quot;</span>)
+
+<span class="hljs-comment">#dot -Tpng tree.dot -o tree.png</span>
+</div></code></pre>
+<p>Accuracy: 1.0 <br>
+Predicted class for the new sample: setosa
+<br></p>
+<ol start="6">
+<li>Implement the naïve Bayesian classifier for a sample training data set stored as a .CSV file. Compute the accuracy of the classifier, considering few test data sets.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+fulldata = load_iris()
+data = fulldata.data
+target = fulldata.target
+xtrain,xtest,ytrain,ytest = train_test_split(data,target,test_size=<span class="hljs-number">0.3</span>,random_state=<span class="hljs-number">42</span>)
+
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> LabelEncoder
+target = LabelEncoder().fit_transform(target)   <span class="hljs-comment"># automatic text to numbers</span>
+
+<span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB
+bclassifier = GaussianNB().fit(xtrain,ytrain)
+bpredict = bclassifier.predict(xtest)
+
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score,confusion_matrix
+<span class="hljs-built_in">print</span>(confusion_matrix(bpredict,ytest))
+<span class="hljs-built_in">print</span>(accuracy_score(bpredict,ytest))
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>[[19  0  0]
+ [ 0 12  0]
+ [ 0  1 13]]
+0.9777777777777777
+</div></code></pre>
+<ol start="7">
+<li>Assuming a set of documents that need to be classified, use the naive Bayesian Classifier model to perform this task. Calculate the accuracy, precision, and recall for your data set.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+msg = pd.read_csv(<span class="hljs-string">&#x27;dataset_text.csv&#x27;</span>, names=[<span class="hljs-string">&#x27;message&#x27;</span>, <span class="hljs-string">&#x27;label&#x27;</span>])
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Total Instances of Dataset: &quot;</span>, msg.shape[<span class="hljs-number">0</span>])
+
+msg[<span class="hljs-string">&#x27;labelnum&#x27;</span>] = msg.label.<span class="hljs-built_in">map</span>({<span class="hljs-string">&#x27;pos&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;neg&#x27;</span>: <span class="hljs-number">0</span>})
+X = msg.message
+y = msg.labelnum
+
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+Xtrain, Xtest, ytrain, ytest = train_test_split(X, y)
+
+<span class="hljs-comment"># required to convert string sentence to float</span>
+<span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> CountVectorizer
+count_v = CountVectorizer()
+Xtrain_dm = count_v.fit_transform(Xtrain)
+Xtest_dm = count_v.transform(Xtest)
+
+<span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> MultinomialNB
+clf = MultinomialNB()
+clf.fit(Xtrain_dm, ytrain)
+pred = clf.predict(Xtest_dm)
+
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, confusion_matrix, precision_score, recall_score
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nAccuracy Metrics: &#x27;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Accuracy: &#x27;</span>, accuracy_score(ytest, pred))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Recall: &#x27;</span>, recall_score(ytest, pred))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Precision: &#x27;</span>, precision_score(ytest, pred))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Confusion Matrix: \n&#x27;</span>, confusion_matrix(ytest, pred))
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>Total Instances of Dataset:  18
+Accuracy Metrics:
+Accuracy:  1.0
+Recall:  1.0
+Precision:  1.0
+Confusion Matrix:
+ [[2 0]
+ [0 3]]
+</div></code></pre>
+<ol start="8">
+<li>Construct aBayesian network considering medical data. Use this model to demonstrate the diagnosis of heart patients using standard Heart Disease Data Set.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> pgmpy.models <span class="hljs-keyword">import</span> BayesianModel
+<span class="hljs-keyword">from</span> pgmpy.estimators <span class="hljs-keyword">import</span> MaximumLikelihoodEstimator
+<span class="hljs-keyword">from</span> pgmpy.inference <span class="hljs-keyword">import</span> VariableElimination
+
+heart_disease = pd.read_csv(<span class="hljs-string">&#x27;heart.csv&#x27;</span>)
+heart_disease = heart_disease.replace(<span class="hljs-string">&#x27;?&#x27;</span>, np.nan)
+
+<span class="hljs-comment"># Define the Bayesian network structure</span>
+model = BayesianModel([
+    (<span class="hljs-string">&#x27;age&#x27;</span>, <span class="hljs-string">&#x27;trestbps&#x27;</span>), (<span class="hljs-string">&#x27;age&#x27;</span>, <span class="hljs-string">&#x27;fbs&#x27;</span>), (<span class="hljs-string">&#x27;sex&#x27;</span>, <span class="hljs-string">&#x27;trestbps&#x27;</span>), (<span class="hljs-string">&#x27;exang&#x27;</span>, <span class="hljs-string">&#x27;trestbps&#x27;</span>),
+    (<span class="hljs-string">&#x27;trestbps&#x27;</span>, <span class="hljs-string">&#x27;heartdisease&#x27;</span>), (<span class="hljs-string">&#x27;fbs&#x27;</span>, <span class="hljs-string">&#x27;heartdisease&#x27;</span>), (<span class="hljs-string">&#x27;heartdisease&#x27;</span>, <span class="hljs-string">&#x27;restecg&#x27;</span>),
+    (<span class="hljs-string">&#x27;heartdisease&#x27;</span>, <span class="hljs-string">&#x27;thalach&#x27;</span>), (<span class="hljs-string">&#x27;heartdisease&#x27;</span>, <span class="hljs-string">&#x27;chol&#x27;</span>)
+])
+model.fit(heart_disease, estimator=MaximumLikelihoodEstimator)
+
+heart_disease_infer = VariableElimination(model)
+
+<span class="hljs-comment"># Calculate probability of Heart Disease given Age=63</span>
+q = heart_disease_infer.query(variables=[<span class="hljs-string">&#x27;heartdisease&#x27;</span>], evidence={<span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">63</span>})
+<span class="hljs-built_in">print</span>(q)
+
+q = heart_disease_infer.query(variables=[<span class="hljs-string">&#x27;heartdisease&#x27;</span>], evidence={<span class="hljs-string">&#x27;chol&#x27;</span>: <span class="hljs-number">233</span>})  <span class="hljs-comment"># cholesterol</span>
+<span class="hljs-built_in">print</span>(q)
+
+q = heart_disease_infer.query(variables=[<span class="hljs-string">&#x27;heartdisease&#x27;</span>], evidence={<span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">63</span>, <span class="hljs-string">&#x27;sex&#x27;</span> :<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;trestbps&#x27;</span>:<span class="hljs-number">130</span>})
+<span class="hljs-built_in">print</span>(q)
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>+-----------------+---------------------+
+| heartdisease    |   phi(heartdisease) |
++=================+=====================+
+| heartdisease(0) |              0.5161 |
++-----------------+---------------------+
+| heartdisease(1) |              0.1765 |
++-----------------+---------------------+
+| heartdisease(2) |              0.1315 |
++-----------------+---------------------+
+| heartdisease(3) |              0.0655 |
++-----------------+---------------------+
+| heartdisease(4) |              0.1104 |
++-----------------+---------------------+
+</div></code></pre>
+<ol start="9">
+<li>Demonstrate the working of EM algorithm to cluster a set of data stored in a .CSV file.</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+dataset = load_iris()
+x = pd.DataFrame(dataset.data, columns=[<span class="hljs-string">&#x27;sepal_length&#x27;</span>, <span class="hljs-string">&#x27;sepal_width&#x27;</span>, <span class="hljs-string">&#x27;petal_length&#x27;</span>, <span class="hljs-string">&#x27;petal_width&#x27;</span>])
+y = pd.DataFrame(dataset.target, columns=[<span class="hljs-string">&#x27;Targets&#x27;</span>])
+
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+colormap = np.array([<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;lime&#x27;</span>, <span class="hljs-string">&#x27;black&#x27;</span>])    <span class="hljs-comment"># colormap for visualization</span>
+
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+fig = plt.figure(figsize=(<span class="hljs-number">14</span>, <span class="hljs-number">7</span>))           <span class="hljs-comment"># original data</span>
+plt.subplot(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>)
+plt.scatter(x[<span class="hljs-string">&#x27;petal_length&#x27;</span>], x[<span class="hljs-string">&#x27;petal_width&#x27;</span>], c=colormap[y[<span class="hljs-string">&#x27;Targets&#x27;</span>]], s=<span class="hljs-number">40</span>)
+plt.title(<span class="hljs-string">&#x27;Real&#x27;</span>)
+
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> preprocessing
+scaler = preprocessing.StandardScaler()
+x_scaled = scaler.fit_transform(x)
+x_scaled = pd.DataFrame(x_scaled, columns=x.columns)
+
+<span class="hljs-keyword">from</span> sklearn.mixture <span class="hljs-keyword">import</span> GaussianMixture
+gmm = GaussianMixture(n_components=<span class="hljs-number">3</span>)
+gmm.fit(x_scaled)
+y_cluster_gmm = gmm.predict(x_scaled)
+
+<span class="hljs-keyword">import</span> sklearn.metrics <span class="hljs-keyword">as</span> sm
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The accuracy score of EM:&quot;</span>, sm.accuracy_score(y[<span class="hljs-string">&#x27;Targets&#x27;</span>], y_cluster_gmm))
+
+plt.subplot(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>)        <span class="hljs-comment"># Plot the clusters predicted by GMM</span>
+plt.scatter(x[<span class="hljs-string">&#x27;petal_length&#x27;</span>], x[<span class="hljs-string">&#x27;petal_width&#x27;</span>], c=colormap[y_cluster_gmm], s=<span class="hljs-number">40</span>)
+plt.title(<span class="hljs-string">&#x27;GMM Clusters&#x27;</span>)
+plt.show()
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>The accuracy score of EM: 0.0
+
+GRAPH 2 
+</div></code></pre>
+<ol start="10">
+<li>Demonstrate the working of SVM classifier for a suitable data set</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+data = pd.read_csv(<span class="hljs-string">&#x27;SocialNetworkAds.csv&#x27;</span>)
+X = data.iloc[:,:-<span class="hljs-number">1</span>].values
+y = data.iloc[:,-<span class="hljs-number">1</span>].values
+
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+Xtrain,Xtest,ytrain,ytest = train_test_split(X,y,test_size=<span class="hljs-number">0.3</span>,random_state=<span class="hljs-number">42</span>)
+
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler
+s = StandardScaler()
+Xtrain = s.fit_transform(Xtrain)
+Xtest = s.transform(Xtest)
+
+<span class="hljs-keyword">from</span> sklearn.svm <span class="hljs-keyword">import</span> SVC
+sc = SVC(kernel=<span class="hljs-string">&#x27;rbf&#x27;</span>,random_state=<span class="hljs-number">0</span>).fit(Xtrain,ytrain)
+ypred = sc.predict(Xtest)
+
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score,confusion_matrix
+<span class="hljs-built_in">print</span>(accuracy_score(ytest,ypred))
+<span class="hljs-built_in">print</span>(confusion_matrix(ytest,ypred))
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>0.9416666666666667
+[[68  5]
+ [ 2 45]]
+</div></code></pre>
+<ol start="11">
+<li>Demonstrate the working of KNN classifier for a suitable dataset</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+data = pd.read_csv(<span class="hljs-string">&#x27;Iris.csv&#x27;</span>)
+X = data.iloc[:, :-<span class="hljs-number">1</span>].values
+y = data.iloc[:, -<span class="hljs-number">1</span>].values
+
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.3</span>, random_state=<span class="hljs-number">42</span>)
+
+<span class="hljs-keyword">from</span> sklearn.neighbors <span class="hljs-keyword">import</span> KNeighborsClassifier
+knn_classifier = KNeighborsClassifier(n_neighbors=<span class="hljs-number">3</span>)
+knn_classifier.fit(X_train, y_train)
+y_pred = knn_classifier.predict(X_test)
+
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score,confusion_matrix
+accuracy = accuracy_score(y_test, y_pred)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Accuracy: <span class="hljs-subst">{accuracy}</span>&quot;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Accuracy:&quot;</span>,confusion_matrix(y_test, y_pred))
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>Accuracy: 1.0
+Accuracy: [[19  0  0]
+ [ 0 13  0]
+ [ 0  0 13]]
+</div></code></pre>
+<ol start="12">
+<li>Demonstrate the working of Ensembling classifier for a suitable dataset</li>
+</ol>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris
+<span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+<span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> VotingClassifier
+<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
+<span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> RandomForestClassifier
+<span class="hljs-keyword">from</span> sklearn.svm <span class="hljs-keyword">import</span> SVC
+<span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris[<span class="hljs-string">&#x27;data&#x27;</span>], iris[<span class="hljs-string">&#x27;target&#x27;</span>], test_size=<span class="hljs-number">0.3</span>, random_state=<span class="hljs-number">42</span>)
+
+log_clf = LogisticRegression()
+rnd_clf = RandomForestClassifier()
+svm_clf = SVC()
+
+voting_clf = VotingClassifier(estimators=[(<span class="hljs-string">&#x27;lr&#x27;</span>, log_clf), (<span class="hljs-string">&#x27;rf&#x27;</span>, rnd_clf), (<span class="hljs-string">&#x27;svm&#x27;</span>, svm_clf)], voting=<span class="hljs-string">&#x27;hard&#x27;</span>)
+voting_clf.fit(X_train, y_train)
+y_pred_voting = voting_clf.predict(X_test)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Voting Classifier Accuracy:&quot;</span>, accuracy_score(y_test, y_pred_voting))
+</div></code></pre>
+<p>output</p>
+<pre class="hljs"><code><div>Voting Classifier Accuracy: 1.0
+</div></code></pre>
+
+</body>
+</html>
